@@ -1,46 +1,63 @@
 import Head from 'next/head'
 import Header from '../src/components/Header'
+import Link from 'next/link'
 
 export default function Home() {
-    return (
-        <div className="container">
-            <Head>
-                <title>webreznov-audio</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+  return (
+    <div className="container">
+      <Head>
+        <title>webreznov-audio</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-            <Header />
+      <Header />
 
-            <main>
-                <form className="login">
-                    <div className="login_field">
-                        <label className="login_field_label">email</label>
-                        <input type="text" placeholder="example@mail.ru"></input>
-                    </div>
+      <main>
+        <div className="grid">
+          <Link href="/downloading">
+            <a  className="card">
+              <h3>Загрузка &rarr;</h3>
+              <p>Загрузить файл на сервер</p>
+            </a>
+          </Link>
 
-                    <div className="login_field">
-                        <label className="login_field_label">password</label>
-                        <input type="text"></input>
-                    </div>
+          <a href="https://nextjs.org/learn" className="card">
+            <h3>Как это работает &rarr;</h3>
+            <p>Описание функционала сервиса</p>
+          </a>
 
-                    <div className="login_field">
-                        <input type="submit" value="LogIn" />
-                    </div>
-                </form>
-            </main>
+          <a
+            href="https://github.com/vercel/next.js/tree/master/examples"
+            className="card"
+          >
+            <h3>Плеер &rarr;</h3>
+            <p>Слушать музыку</p>
+          </a>
 
-            <footer>
-                <a
-                    href="https://webreznov.now.sh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Разработано от студии{' '}
-                    <h2> #webreznov__studio</h2>
-                </a>
-            </footer>
+          <a
+            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            className="card"
+          >
+            <h3>Настройки &rarr;</h3>
+            <p>
+              Настройки профиля
+            </p>
+          </a>
+        </div>
+      </main>
 
-            <style jsx>{`
+      <footer>
+        <a
+          href="https://webreznov.now.sh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Разработано от студии{' '}
+          <h2> #webreznov__studio</h2>
+        </a>
+      </footer>
+
+      <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -58,12 +75,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-        .login .login_field {
-            margin-bottom: 20px;
-        }
-        .login .login_field_label {
-            display: block;
-        }
+
         footer {
           width: 100%;
           height: 100px;
@@ -176,7 +188,7 @@ export default function Home() {
         }
       `}</style>
 
-            <style jsx global>{`
+      <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -190,6 +202,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-        </div>
-    )
+    </div>
+  )
 }

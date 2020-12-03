@@ -14,13 +14,8 @@ export default function Home() {
             <main>
                 <form className="login">
                     <div className="login_field">
-                        <label className="login_field_label">email</label>
-                        <input type="text" placeholder="example@mail.ru"></input>
-                    </div>
-
-                    <div className="login_field">
-                        <label className="login_field_label">password</label>
-                        <input type="text"></input>
+                        <label className="login_field_label">Your file:</label>
+                        <input type="file"></input>
                     </div>
 
                     <div className="login_field">
