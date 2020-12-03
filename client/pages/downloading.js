@@ -2,40 +2,36 @@ import Head from 'next/head'
 import Header from '../src/components/Header'
 
 export default function Home() {
-    return (
-        <div className="container">
-            <Head>
-                <title>webreznov-audio</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+  return (
+    <div className="container">
+      <Head>
+        <title>webreznov-audio</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
+      <main>
+        <form className="login">
+          <div className="login_field">
+            <label className="login_field_label">Your file:</label>
+            <input type="file"></input>
+          </div>
+          <div className="login_field">
+            <input type="submit" value="LogIn" />
+          </div>
+        </form>
+      </main>
+      <footer>
+        <a
+          href="https://webreznov.now.sh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Разработано от студии{' '}
+          <h2> #webreznov__studio</h2>
+        </a>
+      </footer>
 
-            <Header />
-
-            <main>
-                <form className="login">
-                    <div className="login_field">
-                        <label className="login_field_label">Your file:</label>
-                        <input type="file"></input>
-                    </div>
-
-                    <div className="login_field">
-                        <input type="submit" value="LogIn" />
-                    </div>
-                </form>
-            </main>
-
-            <footer>
-                <a
-                    href="https://webreznov.now.sh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Разработано от студии{' '}
-                    <h2> #webreznov__studio</h2>
-                </a>
-            </footer>
-
-            <style jsx>{`
+      <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -171,7 +167,7 @@ export default function Home() {
         }
       `}</style>
 
-            <style jsx global>{`
+      <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -185,6 +181,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-        </div>
-    )
+    </div>
+  )
 }
