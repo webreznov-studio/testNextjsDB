@@ -9,23 +9,19 @@ export default function Home() {
         <title>webreznov-audio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Header />
-
       <main>
         <div className="grid">
           <Link href="/downloading">
-            <a  className="card">
+            <a className="card">
               <h3>Загрузка &rarr;</h3>
               <p>Загрузить файл на сервер</p>
             </a>
           </Link>
-
           <a href="https://nextjs.org/learn" className="card">
             <h3>Как это работает &rarr;</h3>
             <p>Описание функционала сервиса</p>
           </a>
-
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className="card"
