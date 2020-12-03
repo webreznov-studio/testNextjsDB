@@ -1,15 +1,20 @@
 {
-  "name": "learn-starter",
-  "version": "0.1.0",
-  "private": true,
+  "name": "test-db-passport-pay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "cd client && npm start"
   },
-  "dependencies": {
-    "next": "^10.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webreznov-studio/testNextjsDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webreznov-studio/testNextjsDB/issues"
+  },
+  "homepage": "https://github.com/webreznov-studio/testNextjsDB#readme"
 }
