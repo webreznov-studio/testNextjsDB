@@ -1,10 +1,17 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Simple Example of Deploying a React Express (Node) App to Heroku 2020
 
-expressjs with reactjs
-https://tuhub.ru/posts/react-express
+A simple React Express (Node) app that I deployed to Heroku and used in my YouTube video "How to Deploy React Express, Node App to Heroku - 2020"
 
-passportjs lesson
-https://www.youtube.com/watch?v=LDnwNtWIq_4
+https://youtu.be/xgvLP3f2Y7k
 
-___
-https://webreznov-audio.herokuapp.com/
+
+Other Helpful Links:
+
+Tutoring:                 https://avantutor.com
+
+Coding Q&A:               https://askavan.com
+
+Free Coding Bootcamp:     https://freecodingbootcamp.org
+
+
+
