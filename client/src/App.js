@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 import axios from 'axios';
+import Header from './components/Header';
 
 class App extends React.Component {
   constructor(){
@@ -56,10 +56,6 @@ axios.get('/api').then(
 render = () => {
   return (
     <div className="container">
-      <Head>
-        <title>webreznov-audio</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Header />
       <main>
         <form className="login">
@@ -72,7 +68,7 @@ render = () => {
             <input type="text"></input>
           </div>
           <div className="login_field">
-            <input type="submit" value="LogIn" />
+            {/* <input onClick={goToPage} type="submit" value="LogIn" /> */}
           </div>
         </form>
       </main>
