@@ -1,9 +1,0 @@
-{
-  "/downloading": "pages/downloading.html",
-  "/": "pages/index.html",
-  "/profile": "pages/profile.html",
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
-}

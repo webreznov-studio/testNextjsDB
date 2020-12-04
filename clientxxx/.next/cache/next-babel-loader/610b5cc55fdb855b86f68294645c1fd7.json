@@ -1,1 +1,0 @@
-{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nexport default function Header() {\n  return __jsx(\"header\", {\n    className: \"header\"\n  }, __jsx(\"a\", {\n    href: \"#\"\n  }, __jsx(\"h1\", null, \"webreznov__audio\")));\n}","map":null,"metadata":{},"sourceType":"module"}
