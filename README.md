@@ -1,12 +1,5 @@
-# Simple Example of Deploying a React Express (Node) App to Heroku 2020
+# pern-todo-app
 
-expressjs
-passoprtjs
-postgres
+<img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/03/PERN.png" />
 
-Other Helpful Links:
-
-https://www.youtube.com/watch?v=xgvLP3f2Y7k
-
-
-
+https://www.youtube.com/watch?v=ldYcgPKEZC8
