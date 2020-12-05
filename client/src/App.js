@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Profile from './components/Profile';
 import Downloading from './components/Downloading';
 import './style/main.css'
+import Player from './components/Player';
 
 class App extends React.Component {
   constructor() {
@@ -22,6 +23,7 @@ class App extends React.Component {
         <Route exact path="/" component={Login} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/downloading" component={Downloading} />
+        <Route exact path="/player" component={Player}/>
         <footer>
           <a
             href="https://webreznov.now.sh"

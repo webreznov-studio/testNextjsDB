@@ -4,12 +4,13 @@ const path = require('path');
 const app = express();
 const helmet = require('helmet') // creates headers that protect from attacks (security)
 const cors = require('cors')  // allows/disallows cross-site communication
+const dbClient = require('./db')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 // --> Add this
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:3000', 'http://localhost:8080', 'https://shrouded-journey-38552.herokuapp.com', 'https://webreznov-audio.herokuapp.com']
+const whitelist = ['http://localhost:3000', 'http://localhost:8080', 'https://webreznov-audio.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
@@ -34,6 +35,10 @@ app.post('/api/', (req, res) => {
     `Person created: ${req.body.person.name}`,
   );
 });
+app.get('/api/database/show-tables', (req, res) => {
+  /* */
+  res.send()
+})
 
 // --> Add this
 if (process.env.NODE_ENV === 'production') {
