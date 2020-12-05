@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const helmet = require('helmet') // creates headers that protect from attacks (security)
 const cors = require('cors')  // allows/disallows cross-site communication
+const dbClient = require('./db')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 
@@ -34,6 +35,10 @@ app.post('/api/', (req, res) => {
     `Person created: ${req.body.person.name}`,
   );
 });
+app.get('/api/database/show-tables', (req, res) => {
+  /* */
+  res.send()
+})
 
 // --> Add this
 if (process.env.NODE_ENV === 'production') {

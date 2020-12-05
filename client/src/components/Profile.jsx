@@ -16,7 +16,7 @@ export default function Profile() {
             <h3>Как это работает &rarr;</h3>
             <p>Описание функционала сервиса</p>
           </Link>
-          <Link to="/downloading" className="card">
+          <Link to="/player" className="card">
 
             <h3>Плеер &rarr;</h3>
             <p>Слушать музыку</p>
