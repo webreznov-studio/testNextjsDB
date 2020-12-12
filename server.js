@@ -32,14 +32,6 @@ app.use(helmet())
 // --> Add this
 app.use(cors(corsOptions))
 
-app.get('/api/', (req, res) => {
-  res.send({ people: 'You want to see people I assume' });
-});
-app.post('/api/', (req, res) => {
-  res.send(
-    `Person created: ${req.body.person.name}`,
-  );
-});
 app.get('/api/database/add-user', (req, res) => {
   const addUser = new userModel({
     id: '1r22-1r22-1r22-1r22',
@@ -58,11 +50,13 @@ app.get('/api/database/check-user', (req, res) => {
   const findUser = userModel;
   console.log('email: ',req.query.email)
   console.log('password: ',req.query.password)
-  const test = findUser.findOne({}, (err, data) => {
-    console.log('!!!!@!!!!@!!!!',data)
+  findUser.findOne({}, (err, data) => {
+    if (data.password === req.query.password) {
+      res.send(data.id)
+    } else {
+      res.send(false)
+    }
   }).where({email: req.query.email});
-
-  res.send('user exsist!');
 });
 
 // --> Add this
