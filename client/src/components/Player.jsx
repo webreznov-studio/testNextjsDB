@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player';
-
 
 export default function Player() {
     return (
