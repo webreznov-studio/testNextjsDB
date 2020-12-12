@@ -28,8 +28,7 @@ class App extends React.Component {
           <a
             href="https://webreznov.now.sh"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             Разработано от студии{' '}
             <h2> #webreznov__studio</h2>
           </a>
