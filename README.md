@@ -13,4 +13,4 @@ postgres
 https://www.youtube.com/watch?v=xgvLP3f2Y7k
 
 ## Issues
-- proxy: production connect server with client
+- proxy: production connect server with client: https://github.com/chimurai/http-proxy-middleware
