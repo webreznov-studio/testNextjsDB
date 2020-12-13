@@ -16,7 +16,8 @@ export default function Login() {
       }
     })
     .then(function (res) {
-      redirect.push('/profile')
+      console.log(res)
+      return res === true ? redirect.push('/profile') : null
     })
     .catch(function (err) {
       console.log(err);

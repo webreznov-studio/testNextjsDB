@@ -46,17 +46,32 @@ app.get('/api/database/add-user', (req, res) => {
 
   res.send('user added!');
 });
+
 app.get('/api/database/check-user', (req, res) => {
+  const result = {
+    status: false
+  };
   const findUser = userModel;
   console.log('email: ',req.query.email)
   console.log('password: ',req.query.password)
-  findUser.findOne({}, (err, data) => {
-    if (data.password === req.query.password) {
-      res.send(data.id)
-    } else {
-      res.send(false)
-    }
-  }).where({email: req.query.email});
+
+  findUser
+    .findOne({}, (err, data) => {
+      if (data.password === req.query.password) {
+        Object.assign(result, {
+          status: true,
+          id: data.id
+        })
+      } else {
+        Object.assign(result, {
+          status: false,
+        })
+      }
+    })
+    .where({email: req.query.email});
+
+  console.log(result)
+  res.send(result)
 });
 
 // --> Add this
