@@ -16,8 +16,7 @@ export default function Login() {
       }
     })
     .then(function (res) {
-      console.log(res)
-      return res === true ? redirect.push('/profile') : null
+      return res.data.status === true ? redirect.push('/profile') : null
     })
     .catch(function (err) {
       console.log(err);
@@ -38,7 +37,6 @@ export default function Login() {
           </div>
           <div className="login_field">
             <input type="submit" value="LogIn" />
-            <Link to='/profile'>Профиль</Link>
           </div>
         </form>
       </main>

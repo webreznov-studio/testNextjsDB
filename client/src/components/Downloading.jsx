@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 
 export default function Downloading() {
   return (
     <div>
-
       <main>
         <form className="login">
           <div className="login_field">
@@ -16,5 +15,5 @@ export default function Downloading() {
         </form>
       </main>
     </div>
-  )
+  );
 }
