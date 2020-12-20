@@ -9,7 +9,7 @@ export default function Login() {
 
   function goToPage(e) {
     e.preventDefault();
-    Axios.get('/api/database/check-user', {
+    Axios.post('/api/database/check-user', {
       params: {
         email: login,
         password: password
