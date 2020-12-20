@@ -61,21 +61,21 @@ app.post("/api/database/check-user", (req, res) => {
           message: "email error",
         });
         console.log(result);
-        res.status(409).send(result);
+        res.send(result);
       } else if (data.password === req.body.params.password) {
         Object.assign(result, {
           status: true,
           id: data.id,
         });
         console.log(result);
-        res.status(200).send(result);
+        res.send(result);
       } else {
         Object.assign(result, {
           status: false,
           message: "password error",
         });
         console.log(result);
-        res.status(409).send(result);
+        res.send(result);
       }
 
       if (err) {
