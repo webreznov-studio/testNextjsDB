@@ -9,10 +9,10 @@ export default function Login() {
 
   function goToPage(e) {
     e.preventDefault();
-    Axios.post("/api/database/check-user", {
+    Axios.post("/api/text-mail", {
       params: {
         email: login,
-        password: password,
+        phone: password,
       },
     })
       .then(function (res) {
@@ -38,7 +38,7 @@ export default function Login() {
             ></input>
           </div>
           <div className="login_field">
-            <label className="login_field_label">password</label>
+            <label className="login_field_label">phone</label>
             <input 
               type="text" 
               onChange={(e) => setPassword(e.target.value)} 
