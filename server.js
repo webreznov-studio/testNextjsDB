@@ -81,6 +81,32 @@ app.post('/api/text-mail', (req, res) => {
     });
 });
 
+app.post('/api/text-mail-test', (req, res) => {
+    const { to, subject, email, phone } = req.body;
+    const mailData = {
+        from: 'astrologdemidova777@gmail.com',
+        to: 'astrologdemidova777@gmail.com',
+        subject: 'Новая заявка с сайта astrologdemidova.ru',
+        text: `
+        Появился вопрос у человека:
+        email: ${email}
+        phone: ${phone}
+        `,
+        html: `
+        Появился вопрос у человека:
+        email: ${email}
+        phone: ${phone}
+        `,
+    };
+
+    transporter.sendMail(mailData, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        res.status(200).send({ message: "Mail send", message_id: info.messageId });
+    });
+});
+
 app.post("/api/database/check-user", (req, res) => {
   const result = {
     status: false,
