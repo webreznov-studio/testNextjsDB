@@ -50,7 +50,7 @@ const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     auth: {
         user: 'astrologdemidova777@gmail.com',
-        pass: '549astro!*',
+        pass: process.env.ASTROLOG_DEMIDOVA_PASS,
     },
     secure: true, // upgrades later with STARTTLS -- change this based on the PORT
 });
@@ -59,7 +59,7 @@ app.post('/api/text-mail', (req, res) => {
     const { to, subject, email, phone } = req.body;
     const mailData = {
         from: 'astrologdemidova777@gmail.com',
-        to: 'astrologdemidova777@gmail.com',
+        to: 'astrologdemidova@mail.ru',
         subject: 'Новая заявка с сайта astrologdemidova.ru',
         text: `
         Появился вопрос у человека:
