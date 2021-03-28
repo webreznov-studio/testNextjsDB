@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 const helmet = require("helmet"); // creates headers that protect from attacks (security)
+const nodemailer = require('nodemailer');
 const cors = require("cors"); // allows/disallows cross-site communication
 const userModel = require("./db");
 app.use(bodyParser.json());
