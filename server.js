@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // --> Add this
 // ** MIDDLEWARE ** //
-const whitelist = [process.env.LOCALHOST_3000, process.env.LOCALHOST_8080, process.env.WEBREZNOV_AUDIO];
+const whitelist = [process.env.LOCALHOST_3000, process.env.LOCALHOST_8080, process.env.WEBREZNOV_AUDIO, process.env.ASTROLOG_DEMIDOVA];
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin);
