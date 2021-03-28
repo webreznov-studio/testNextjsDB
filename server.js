@@ -55,7 +55,7 @@ const transporter = nodemailer.createTransport({
     secure: true, // upgrades later with STARTTLS -- change this based on the PORT
 });
 
-route.post('/text-mail', (req, res) => {
+app.post('/api/text-mail', (req, res) => {
     const { to, subject, email, phone } = req.body;
     const mailData = {
         from: 'astrologdemidova777@gmail.com',
