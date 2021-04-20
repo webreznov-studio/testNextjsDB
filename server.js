@@ -166,3 +166,17 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, (req, res) => {
   console.log(`server listening on port: ${PORT}`);
 });
+
+let astrologStatisticSate = [];
+
+app.post("/api/statistic/add-view-landing", (req, res) => {
+  const record = {
+    date: Date.now(),
+    entityType: req.body.params.entityType
+  };
+  astrologStatisticSate.push(record);
+});
+
+app.get("/api/get-statistic/view-landing", (req, res) => {
+  res.send(astrologStatisticSate);
+});
